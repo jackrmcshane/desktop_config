@@ -11,5 +11,5 @@
 !tmux
 !tmux/*
 
-!zsh
-!zsh/*
+!shell
+!shell/*
