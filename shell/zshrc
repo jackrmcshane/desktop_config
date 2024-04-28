@@ -12,8 +12,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-#ZSH_THEME="theunraveler"
-ZSH_THEME="sorin"
+# ZSH_THEME="afowler"
+# ZSH_THEME="duellj"
+# ZSH_THEME="kennethreitz"
+# ZSH_THEME="lukerandall"
+ZSH_THEME="pmcgee"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -110,7 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-source ~/.bash_aliases
+source $HOME/.config/shell/aliases
 # source ~/.git-completion.zsh
 setxkbmap -option "caps:escape" # convert caps lock to escape # doesnt persist
 
@@ -120,6 +123,66 @@ autoload -U compinit && compinit -u
 
 alias luamake=/home/asimov/lua-language-server/3rd/luamake/luamake
 
+
+# autoload -Uz vcs_info
+# precmd() { vcs_info }
+# zstyle ':vcs_info:git:*' formats '%b '
+# setopt PROMPT_SUBST
+#
+# git_branch() {
+#     git rev-parse --abbrev-ref HEAD 2> /dev/null
+# }
+#
+# git_upstream_pos() {
+#     local commit_count=$(git rev-list --count --left-right @{upstream}...HEAD 2> /dev/null)
+#     if [ -n "$commit_count" ]; then
+#         local behind_count=$(echo -n "$commit_count" | cut -f1)
+#         local ahead_count=$(echo -n "$commit_count" | cut -f2)
+#         if [ "$behind_count" != "0" ]; then
+#             echo -n " ${behind_count}↑"
+#         fi
+#         if [ "$ahead_count" != "0" ]; then
+#             echo -n " ${ahead_count}↑"
+#         fi
+#     fi
+# }
+#
+#
+# git_status_symbols() {
+#     local gitstatus=$(git status --porcelain 2> /dev/null)
+#     if [ -n "$gitstatus" ]; then
+#         local status_string="";
+#         if [ -n "$(echo "$gitstatus" | grep '^[^? ]')" ]; then
+#             status_string="$status_string$GREEN+$BLANK"
+#         fi
+#         if [ -n "$(echo "$gitstatus" | grep '^.[^? ]')" ]; then
+#             status_string="$status_string$RED*$BLANK"
+#         fi
+#         if [ -n "$(echo "$gitstatus" | grep '^[?][?]')" ]; then
+#             status_string="$status_string?"
+#         fi
+#         echo -e " $status_string"
+#     fi
+# }
+#
+# RED='%F{red}'
+# GREEN='%F{green}'
+# BLANK='%f'
+#
+#
+# git_prompt() {
+#     local branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+#     if [ -n "$branch_name" ]; then
+#         echo -e "${branch_name}$(git_status_symbols)$(git_upstream_pos)"
+#     fi
+# }
+#
+# # PROMPT="${PROMPT//\%!/${vcs_info_msg_0_}}"
+# PROMPT="${PROMPT//\%!/$(git_prompt)}"
+# PROMPT="${PROMPT//\%n/%*}"
+# PROMPT="${PROMPT//@/}"
+# PROMPT="${PROMPT//\%m/}"
+# RPROMPT=""
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
     exec tmux

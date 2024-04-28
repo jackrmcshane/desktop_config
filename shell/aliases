@@ -30,6 +30,8 @@ alias \
 # apt shortcuts
 alias search="sudo apt search $1" \
 	install="sudo apt install -y $1" \
+	update="sudo apt update" \
+	upgrade="sudo apt upgrade" \
 
 # feel like I could just use Makefile to accomplish..
 alias compilecc="g++ -std=c++20 -Wall -o" \
@@ -69,6 +71,7 @@ alias \
 # directory shortcuts
 alias cac="cd /home/asimov/.cache && ls -lhN" \
 cf="cd /home/asimov/.config && ls -lhN" \
+zc="vi $HOME/.config/shell/zshrc" \
 D="cd /home/asimov/Downloads && ls -lhN" \
 d="cd /home/asimov/Documents && ls -lhN" \
 dt="cd /home/asimov/.local/share && ls -lhN" \
