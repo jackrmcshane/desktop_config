@@ -1,0 +1,17 @@
+# unbind default prefix
+unbind-key C-b
+
+unbind L    # switch to last session
+unbind m    # break pane
+unbind o    # focus through pane
+unbind "\$" # rename-session
+unbind ,    # rename window
+unbind %    # split-window -h
+unbind '"'  # split-window
+unbind \}   # swap-pane -D
+unbind \{   # swap-pane -U
+unbind l    # last window
+unbind &    # kill window
+unbind \;
+unbind s    # choose session
+unbind x    # confirm kill pane

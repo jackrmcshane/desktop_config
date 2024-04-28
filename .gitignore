@@ -1,0 +1,15 @@
+
+# ignore all files, directories
+*
+
+# except
+!.gitignore
+
+!nvim
+!nvim/*
+
+!tmux
+!tmux/*
+
+!zsh
+!zsh/*
