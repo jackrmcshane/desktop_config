@@ -25,7 +25,8 @@ alias \
 	la="ls -lahN --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
-	find="find . -name" \
+	ff="find . -type f -name" \
+	fd="find . -type d -name" \
 
 # apt shortcuts
 alias search="sudo apt search $1" \
