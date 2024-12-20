@@ -8,6 +8,14 @@ for command in mount umount sv pacman updatedb su ; do
 	alias $command="sudo $command"
 done; unset command
 
+# apt shorthand
+alias \
+	update="sudo apt update" \
+	upgrade="sudo apt update && sudo apt upgrade -yy" \
+	search="sudo apt search $1" \
+	install="sudo apt install -y $1" \
+	installed="sudo apt list --installed"
+
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
 	cp="cp -iv" \
@@ -19,19 +27,18 @@ alias \
 
 # Colorize commands when possible.
 alias \
+	l="ls -lhN --color=auto --group-directories-first" \
 	ls="ls -lhN --color=auto --group-directories-first" \
-	sl="ls -lhN --color=auto --group-directories-first" \
+	sl="ls" \
 	ll="ls -lhN --color=auto --group-directories-first" \
-	la="ls -lahN --color=auto --group-directories-first" \
+	la="ls -lAhN --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	find="find . -name" \
-
-# apt shortcuts
-alias search="sudo apt search $1" \
-	install="sudo apt install -y $1" \
+	wd="pwd" \
 
 # feel like I could just use Makefile to accomplish..
+# I have..
 alias compilecc="g++ -std=c++20 -Wall -o" \
 
 # These common commands are just too long! Abbreviate them.
@@ -50,14 +57,17 @@ alias \
     ka="killall" \
     g="git" \
     sdn="sudo shutdown -h now" \
+    reboot="sudo shutdown -r $1" \
     e="exit" \
     v="nvim" \
-    z="zathura --fork" \
+    za="zathura --fork" \
     neo="neofetch" \
     gs="git status" \
     t="tmux" \
+    # need to choose 1 already :'(
     lsblk="lsblk | grep -v \"loop\"" \
     blk="lsblk | grep -v \"loop\"" \
+    bk="lsbkl | grep -v loop" \
     b="lsblk | grep -v \"loop\"" \
     esc="setxkbmap -option \"caps:swapescape\"" \
     gl="git log --graph --oneline --decorate" \
@@ -65,6 +75,15 @@ alias \
     fetch="neofetch" \
     r="ranger" \
     msd="mount /dev/sdb1 /mnt/sandisk" \
+
+
+alias bat="batcat"
+alias cat="batcat"
+alias cd="z"
+alias luamake="/home/asimov/lua-language-server/3rd/luamake/luamake"
+alias ..="cd .."
+alias ...="cd ../../"
+alias lg="lazygit"
 
 # directory shortcuts
 alias cac="cd /home/asimov/.cache && ls -lhN" \

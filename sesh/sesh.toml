@@ -1,0 +1,71 @@
+# look at using this with tmuxinator!!! Seems very powerful.
+
+[default_session]
+startup_command = "ranger"
+# startup_script = "~/ranger_startup.sh"
+
+[[session]]
+name = "nvim"
+path = "~/.config/nvim"
+startup_command = "nvim init.lua"
+# something like below can be done in combination with tmuxinator
+# startup_command = "lazygit && tmux new-window && nvim init.lua"
+
+[[session]]
+name = "tmux"
+path = "~/.config/tmux"
+startup_command = "nvim tmux.conf.bindings"
+
+[[session]]
+name = "main"
+path = "~"
+startup_command = "ls -lh"
+
+[[session]]
+name = "playground"
+path = "~/personal/playground"
+startup_command = "ls -lAh"
+
+[[session]]
+name = "shell"
+path = "~/.config/shell"
+startup_command = "nvim zshrc"
+
+[[session]]
+name = "sesh"
+path = "~/.config/sesh"
+startup_command = "nvim sesh.toml"
+
+[[session]]
+name = "scripts"
+path = "~/.local/bin"
+
+[[session]]
+name = "dotfiles"
+path = "~/.dotfiles"
+
+[[session]]
+name = "Downloads"
+path = "~/Downloads"
+startup_command = "ranger"
+
+[[session]]
+name = "alacritty"
+path = "~/.config/alacritty"
+startup_command = "nvim alacritty.yml"
+
+[[session]]
+name = "remote"
+path = "~/remote"
+startup_command = "nmap 10.0.0.0/24"
+
+[[session]]
+name = "music"
+path = "~/"
+startup_command = "ncspot"
+
+# not sure how this one works, but interested
+# [[session]]
+# name = "Lazy Plugins"
+# path = "~/.local/share/nvim/lazy"
+# startup_command = "sesh connect (ls | fzf --no-border --preview 'glow -s auto {}/README.md') && exit"

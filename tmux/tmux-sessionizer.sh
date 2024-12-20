@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(find ~/ ~/.config ~/work ~/personal /mnt/sandisk -mindepth 1 -maxdepth 2 -type d | fzf)
+	selected=$(find ~/ ~/.config ~/work ~/personal /mnt/sandisk -mindepth 1 -maxdepth 2 -type d | /home/jamcshan/.config/fzf/bin/fzf)
 fi
 
 if [[ -z $selected ]]; then

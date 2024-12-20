@@ -37,8 +37,8 @@ font pango:monospace 12px
 
 
 # gaps specification
-gaps outer 6
-gaps inner 4
+gaps outer 12
+gaps inner 8
 #smart_gaps on
 # hide border when only one window
 #hide_edge_borders smart
@@ -245,4 +245,4 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 
 # this is not working
 #               border  backgr  text    indicator   child_border
-client.focused  #fabd2f #285577 #ffffff #2e9ef4     #b57614 
+client.focused  #fabd2f #285577 #ffffff #2e9ef4     #d1cec7 

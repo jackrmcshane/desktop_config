@@ -5,9 +5,9 @@
 # except
 !.gitignore
 
-!nvim
-!nvim/*
-!./nvim/*
+# !nvim
+# !nvim/*
+# !./nvim/*
 
 !tmux
 !tmux/*
@@ -17,3 +17,10 @@
 
 !i3
 !i3/*
+
+!sesh
+!sesh/*
+
+# but also, ignore these within those directories
+shell/.zcompdump
+tmux/plugins

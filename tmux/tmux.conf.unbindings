@@ -15,3 +15,6 @@ unbind &    # kill window
 unbind \;
 unbind s    # choose session
 unbind x    # confirm kill pane
+unbind f    # find window
+unbind w    # window view-tree
+unbind Space
