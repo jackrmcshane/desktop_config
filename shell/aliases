@@ -34,8 +34,14 @@ alias \
 	la="ls -lAhN --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
-	find="find . -name" \
-	wd="pwd" \
+	ff="find . -type f -name" \
+	fd="find . -type d -name" \
+
+# apt shortcuts
+alias search="sudo apt search $1" \
+	install="sudo apt install -y $1" \
+	update="sudo apt update" \
+	upgrade="sudo apt upgrade" \
 
 # feel like I could just use Makefile to accomplish..
 # I have..
@@ -88,6 +94,7 @@ alias lg="lazygit"
 # directory shortcuts
 alias cac="cd /home/asimov/.cache && ls -lhN" \
 cf="cd /home/asimov/.config && ls -lhN" \
+zc="vi $HOME/.config/shell/zshrc" \
 D="cd /home/asimov/Downloads && ls -lhN" \
 d="cd /home/asimov/Documents && ls -lhN" \
 dt="cd /home/asimov/.local/share && ls -lhN" \

@@ -18,6 +18,11 @@ if [ ! -d "$ZINIT_HOME" ]; then
   mkdir -p "$(dirname $ZINIT_HOME)"
   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
+# ZSH_THEME="afowler"
+# ZSH_THEME="duellj"
+# ZSH_THEME="kennethreitz"
+# ZSH_THEME="lukerandall"
+# ZSH_THEME="pmcgee"
 
 # source zinit (plugin manager)
 source "${ZINIT_HOME}/zinit.zsh"
@@ -82,23 +87,10 @@ alias ls="ls --color"
 
 # unsetopt BEEP # no beeping!
 
-
-
-
-
-
-
-#setxkbmap -option "caps:escape" # convert caps lock to escape # doesnt persist
-
 eval "$(zoxide init zsh)"
 
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#     exec tmux new -s "main"
-# fi
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
-
-setxkbmap -option "caps:escape" # convert caps lock to escape # doesnt persist
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
    exec sesh connect main
